@@ -1,32 +1,36 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Register from "./Pages/Login/Register/Register";
-import AuthProvider from "./Context/ContextProvider/ContextProvider";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Login from "./Pages/Login/Login/Login";
+import "./App.css";
+import AuthProvider from "./Context/AuthProvider/Autprovider";
+import ResponsiveDrawer from "./Pages/Dashbord/Dashbord/Dashbord";
+import DashbordHome from "./Pages/Dashbord/Dashbordhome/DashbordHome";
 import Home from "./Pages/Home/Home";
-import Navigation from "./Shere/Navigation/Navigation";
-import Footer from "./Shere/Navigation/Footer/Footer";
+import Login from "./Pages/Login/Login/Login";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import Register from "./Pages/Login/Register/Register";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
-          <Navigation></Navigation>
           <Switch>
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/register">
-              <Register></Register>
+            <Route path="/home">
+              <Home></Home>
             </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
+            <Route path="/Register">
+              <Register></Register>
+            </Route>
+            <PrivateRoute path="/dashbord">
+              <ResponsiveDrawer></ResponsiveDrawer>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
-        <Footer></Footer>
       </AuthProvider>
     </div>
   );
