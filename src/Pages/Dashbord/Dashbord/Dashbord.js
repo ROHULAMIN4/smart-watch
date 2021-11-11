@@ -7,32 +7,26 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
-import {
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import DashbordHome from "../Dashbordhome/DashbordHome";
 import Addproduct from "./AddProduct/Addproduct";
 import Review from "../Review/Review";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import useAuth from "../../../hooks/useFirebase/useAuth/useAuth";
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   let { path, url } = useRouteMatch();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { admin } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -45,16 +39,25 @@ function ResponsiveDrawer(props) {
       <List>
         <NavLink
           style={{ textDecoration: "none", color: "blue", fontWeight: "900" }}
-          to="/login"
+          to="/home"
         >
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">Home</Button>
         </NavLink>
         <p></p>
-        <Link to={`${url}`}>dashbordHome</Link>
-        <p></p>
-        <Link to={`${url}/addproduct`}>AddProduct</Link>
+        <Link style={{ textDecoration: "none", color: "teal" }} to={`${url}`}>
+          dashbordHome
+        </Link>
         <p></p>
         <Link to={`${url}/review`}>Review Product</Link>
+        <p></p>
+        {admin && (
+          <Box>
+            <Link to={`${url}/addproduct`}>AddProduct</Link>
+
+            <p></p>
+            <Link to={`${url}/makeadmin`}>Make Admin</Link>
+          </Box>
+        )}
       </List>
       <Divider />
     </div>
@@ -143,6 +146,10 @@ function ResponsiveDrawer(props) {
           </Route>
           <Route path={`${path}/review`}>
             <Review></Review>
+          </Route>
+
+          <Route path={`${path}/makeadmin`}>
+            <MakeAdmin></MakeAdmin>
           </Route>
         </Switch>
       </Box>

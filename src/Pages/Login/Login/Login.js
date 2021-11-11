@@ -55,7 +55,7 @@ const Login = () => {
         </Button>
         <p></p>
         <Link to="/Register">
-          <Button variant="text"> please register</Button>
+          <Button variant="text">New user? please register</Button>
         </Link>
         {isLoading && <CircularProgress />}
         {user?.email && (

@@ -91,6 +91,7 @@ const Register = () => {
         <Alert severity="success">User Created successfully!</Alert>
       )}
       {authError && <Alert severity="error">{authError}</Alert>}
+      {user?.email && <Link to="/">back to home</Link>}
     </div>
   );
 };

@@ -1,8 +1,23 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 const Review = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    fetch("http://localhost:5000/review", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("review post successfully");
+          reset();
+        }
+      });
+  };
   return (
     <>
       <h4 className="text-success">Product review</h4>
