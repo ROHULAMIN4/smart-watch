@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login/Login";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Login/Register/Register";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
             <PrivateRoute path="/dashbord">
               <ResponsiveDrawer></ResponsiveDrawer>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

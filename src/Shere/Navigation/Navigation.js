@@ -26,7 +26,10 @@ const Navigation = () => {
             Baby toys
           </Typography>
           <Link
-            style={{ color: "tomato", textDecoration: "none" }}
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
             to="/totallOrder"
           >
             Products

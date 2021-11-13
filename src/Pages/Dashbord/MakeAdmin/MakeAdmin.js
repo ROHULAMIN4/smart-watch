@@ -8,7 +8,7 @@ const MakeAdmin = () => {
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:5000/users/makeadmin", {
+    fetch("https://salty-fortress-77279.herokuapp.com/users/makeadmin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

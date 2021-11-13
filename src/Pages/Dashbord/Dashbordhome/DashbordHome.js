@@ -6,7 +6,7 @@ const DashbordHome = () => {
   const { user } = useAuth();
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/salesrequiest?email=${user.email}`;
+    const url = `https://salty-fortress-77279.herokuapp.com/salesrequiest?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));

@@ -1,9 +1,13 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import PurchaseModal from "../../Home/PurchaseModal/PurchaseModal";
 
 const RequiestOrser = ({ product }) => {
   const { Name, price, img, description } = product;
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       <div className="col-lg-4 col-sm-12" data-aos="fade-up-left">
@@ -16,7 +20,7 @@ const RequiestOrser = ({ product }) => {
           <h4 className="text-success">{Name}</h4>
           <p>{description}</p>
           <p className="fs-4 fw-bold text-secondary">Price:{price}</p>
-          <Button sx={{ mb: 4 }} variant="contained">
+          <Button onClick={handleOpen} sx={{ mb: 4 }} variant="contained">
             Purchase
           </Button>
           <Link to="/">
@@ -26,6 +30,11 @@ const RequiestOrser = ({ product }) => {
           </Link>
         </div>
       </div>
+      <PurchaseModal
+        handleClose={handleClose}
+        open={open}
+        product={product}
+      ></PurchaseModal>
     </>
   );
 };

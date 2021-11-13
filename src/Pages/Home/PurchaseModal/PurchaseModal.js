@@ -39,7 +39,7 @@ const PurchaseModal = ({ handleClose, open, product }) => {
     const productInformation = {
       ...bookingInfo,
     };
-    fetch("http://localhost:5000/salesrequiest", {
+    fetch("https://salty-fortress-77279.herokuapp.com/salesrequiest", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -121,9 +121,10 @@ const PurchaseModal = ({ handleClose, open, product }) => {
             onBlur={handleOnBlur}
             variant="standard"
           />
+          <p></p>
 
           <Button type="submit" variant="contained">
-            Outlined
+            Submit
           </Button>
         </form>
       </Box>

@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 const RequiestOrder = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/addproduct")
+    fetch("https://salty-fortress-77279.herokuapp.com/addproduct")
       .then((res) => res.json())
       .then((data) => setProducts(data));
     AOS.init();
