@@ -41,21 +41,38 @@ function ResponsiveDrawer(props) {
           style={{ textDecoration: "none", color: "blue", fontWeight: "900" }}
           to="/home"
         >
-          <Button color="inherit">Home</Button>
+          <Button style={{ color: "tomato" }} color="inherit">
+            Back to Home
+          </Button>
         </NavLink>
         <p></p>
         <Link style={{ textDecoration: "none", color: "teal" }} to={`${url}`}>
-          dashbordHome
+          DashbordHome
         </Link>
         <p></p>
-        <Link to={`${url}/review`}>Review Product</Link>
+        <Link
+          style={{ textDecoration: "none", color: "teal" }}
+          to={`${url}/review`}
+        >
+          Review Product
+        </Link>
         <p></p>
         {admin && (
           <Box>
-            <Link to={`${url}/addproduct`}>AddProduct</Link>
+            <Link
+              style={{ textDecoration: "none", color: "teal" }}
+              to={`${url}/addproduct`}
+            >
+              AddProduct
+            </Link>
 
             <p></p>
-            <Link to={`${url}/makeadmin`}>Make Admin</Link>
+            <Link
+              style={{ textDecoration: "none", color: "teal" }}
+              to={`${url}/makeadmin`}
+            >
+              Make Admin
+            </Link>
           </Box>
         )}
       </List>

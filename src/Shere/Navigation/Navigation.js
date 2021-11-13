@@ -21,12 +21,16 @@ const Navigation = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          ></IconButton>
+          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
             Baby toys
           </Typography>
+          <Link
+            style={{ color: "tomato", textDecoration: "none" }}
+            to="/totallOrder"
+          >
+            Products
+          </Link>
           <Link
             style={{ color: "white", textDecoration: "none" }}
             to="/dashbord"
@@ -34,9 +38,11 @@ const Navigation = () => {
             <Button color="inherit">Dashbord</Button>
           </Link>
           {user?.email ? (
-            <Button onClick={logout} color="inherit">
-              Logout
-            </Button>
+            <Box>
+              <Button onClick={logout} color="inherit">
+                Logout
+              </Button>
+            </Box>
           ) : (
             <NavLink
               style={{ textDecoration: "none", color: "white" }}

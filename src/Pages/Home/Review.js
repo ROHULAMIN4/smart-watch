@@ -10,7 +10,9 @@ const Review = () => {
   }, []);
   return (
     <>
-      <h3 className="text-primary"> happy Client Review </h3>
+      <h3 className="text-secondary mt-5 mb-5">
+        <i>happy Client Review</i>
+      </h3>
       <div className="row">
         {review.map((rev) => (
           <ReviewProduct key={rev._id} product={rev}></ReviewProduct>

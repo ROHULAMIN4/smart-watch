@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./Context/AuthProvider/Autprovider";
 import ResponsiveDrawer from "./Pages/Dashbord/Dashbord/Dashbord";
-import DashbordHome from "./Pages/Dashbord/Dashbordhome/DashbordHome";
+import RequiestOrder from "./Pages/Dashbord/RewuiestOrders/RequiestOrder";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login/Login";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
@@ -25,6 +25,9 @@ function App() {
             </Route>
             <Route path="/Register">
               <Register></Register>
+            </Route>
+            <Route path="/totallOrder">
+              <RequiestOrder></RequiestOrder>
             </Route>
             <PrivateRoute path="/dashbord">
               <ResponsiveDrawer></ResponsiveDrawer>
