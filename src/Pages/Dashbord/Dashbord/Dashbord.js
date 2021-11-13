@@ -26,7 +26,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   let { path, url } = useRouteMatch();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { admin } = useAuth();
+  const { admin, user, logout } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -74,6 +74,15 @@ function ResponsiveDrawer(props) {
               Make Admin
             </Link>
           </Box>
+        )}
+        {user?.email ? (
+          <Button onClick={logout} style={{ color: "tomato" }} color="inherit">
+            logOut
+          </Button>
+        ) : (
+          <Button style={{ color: "tomato" }} color="inherit">
+            ''
+          </Button>
         )}
       </List>
       <Divider />
