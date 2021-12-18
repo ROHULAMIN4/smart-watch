@@ -1,0 +1,30 @@
+.login-box {
+  /* background-color: #e3e9ee; */
+  box-shadow: 10px 10px 10px gray;
+}
+.login-img {
+}
+.email-box:hover {
+  box-shadow: 20px 20px 30px rgba(128, 128, 128, 0.726);
+}
+.email-box:hover .email-section {
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.5s !important;
+}
+.register-btn {
+  margin-bottom: 30px !important;
+}
+.email-box:hover .register-btn {
+  background-color: white;
+}
+.login-title {
+  color: rgba(58, 106, 219, 0.876);
+  font-weight: bold !important;
+  font-size: 30px !important;
+}
+.email-box:hover .login-title {
+  color: rgb(43, 161, 230);
+  font-family: "Dancing Script", cursive;
+  font-family: "Oswald", sans-serif;
+}

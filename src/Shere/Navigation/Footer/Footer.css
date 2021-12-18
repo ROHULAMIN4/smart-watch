@@ -1,9 +1,14 @@
 .text-white-style {
   color: rgb(202, 191, 191);
+  text-align: center;
 }
 .latestProduct {
   color: rgb(189, 178, 178);
 }
 .latesProductPrice {
   color: rgb(20, 92, 175);
+}
+.bg-color {
+  background-color: #243441;
+  margin-top: 100px;
 }

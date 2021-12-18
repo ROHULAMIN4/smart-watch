@@ -1,0 +1,15 @@
+.manage {
+  margin-left: 20%;
+}
+.manage td {
+  font-size: 30px;
+}
+tr td:last-child {
+  color: rgba(255, 0, 0, 0.644);
+}
+.order-img {
+  margin-top: 10%;
+}
+.img-manage {
+  width: 100%;
+}

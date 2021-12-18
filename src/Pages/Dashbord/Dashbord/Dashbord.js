@@ -20,6 +20,7 @@ import Addproduct from "./AddProduct/Addproduct";
 import Review from "../Review/Review";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import useAuth from "../../../hooks/useFirebase/useAuth/useAuth";
+import BestSells from "./BestSelles/BestSells";
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -72,6 +73,13 @@ function ResponsiveDrawer(props) {
               to={`${url}/makeadmin`}
             >
               Make Admin
+            </Link>
+            <p></p>
+            <Link
+              style={{ textDecoration: "none", color: "teal" }}
+              to={`${url}/bestselles`}
+            >
+              Best Sells
             </Link>
           </Box>
         )}
@@ -172,6 +180,12 @@ function ResponsiveDrawer(props) {
           </Route>
           <Route path={`${path}/review`}>
             <Review></Review>
+          </Route>
+          <Route path={`${path}/review`}>
+            <Review></Review>
+          </Route>
+          <Route path={`${path}/bestselles`}>
+            <BestSells></BestSells>
           </Route>
 
           <Route path={`${path}/makeadmin`}>

@@ -2,13 +2,13 @@ import React from "react";
 import "./Footer.css";
 const Footer = () => {
   return (
-    <div className="bg-black pb-5">
+    <div className="bg-color pb-5">
       <div className="row">
         <div className="col-lg-4 col-md-6 col-sm-12 text-white-style">
           <h6 className="mb-4 pt-4">About Us</h6> <hr className="text-white" />
           <small className="mb-4 p-2">
-            Are you looking for Best Quality Toys? Your most trusted kids store
-            in Bangladesh got you covered. Visit our branch at #Banani &
+            Are you looking for Best Quality watch? Your most trusted Watch
+            store in Bangladesh got you covered. Visit our branch at #Banani &
             #Dhanmondi or order us online and grab the best quality and Cutest
             baby & kids products and get the best shopping experience everyday
           </small>
@@ -19,33 +19,34 @@ const Footer = () => {
             <i class="fas fa-map-marker"></i> ; Dhaka doher
           </p>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-12">
+        <div className="col-lg-4 col-md-6 col-sm-12 text-white-style">
           <h6 className="mb-4 pt-4 text-white">Latest Products </h6>
+          <hr />
           <p className="latestProduct">
-            Horse Rider <small className="latesProductPrice">= 150 </small>{" "}
+            Horse Rider <small className="latesProductPrice">= 150 </small>
           </p>
           <p className="latestProduct">
-            Horse Rocking Bed{" "}
-            <small className="latesProductPrice">= 340 </small>{" "}
+            Horse Rocking Bed
+            <small className="latesProductPrice">= 340 </small>
           </p>
           <p className="latestProduct">
-            Taddy bear <small className="latesProductPrice">= 600 </small>{" "}
+            Taddy bear <small className="latesProductPrice">= 600 </small>
           </p>
           <p className="latestProduct">
-            RC Helicopter <small className="latesProductPrice">= 1200 </small>{" "}
+            RC Helicopter <small className="latesProductPrice">= 1200 </small>
           </p>
           <p className="latestProduct">
-            Alpha bed puzzle <small className="latesProductPrice">= 190</small>{" "}
+            Alpha bed puzzle <small className="latesProductPrice">= 190</small>
           </p>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-12 text-white">
+        <div className="col-lg-4 col-md-6 col-sm-12 text-white text-center text-white-style">
           <h6 className="mb-4 pt-4 "> Contact Us</h6>
           <hr className="text-white" />
           <p className="mb-4">
             Head office <span className="mb-4 text-warning">: Dhaka doher</span>
           </p>
           <p className="mb-4">
-            Second office{" "}
+            Second office
             <span className="mb-4 text-warning">: Dhaka Nobabgonj</span>
           </p>
           <h6 className="text-success">Contact with Social Media</h6>

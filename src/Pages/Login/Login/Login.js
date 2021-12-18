@@ -8,6 +8,7 @@ import {
 import React, { useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useFirebase/useAuth/useAuth";
+import "./Login.css";
 const Login = () => {
   const location = useLocation();
   const history = useHistory();
@@ -25,44 +26,60 @@ const Login = () => {
     e.preventDefault();
   };
   return (
-    <div>
-      <Typography sx={{ mt: 5 }} variant="body1" gutterBottom>
-        Log in
-      </Typography>
-      <form onSubmit={handleForm}>
-        <TextField
-          id="standard-basic"
-          sx={{ width: "25%", m: 1 }}
-          label="Your Email"
-          type="email"
-          name="email"
-          onBlur={hanleOnBlue}
-          variant="standard"
-        />
-        <p></p>
-        <TextField
-          id="standard-basic"
-          sx={{ width: "25%", m: 1 }}
-          label="Your Password"
-          type="password"
-          name="password"
-          onBlur={hanleOnBlue}
-          variant="standard"
-        />
-        <p></p>
-        <Button type="submit" sx={{ width: "25%", m: 1 }} variant="contained">
-          Sign In
-        </Button>
-        <p></p>
-        <Link to="/Register">
-          <Button variant="text">New user? please register</Button>
-        </Link>
-        {isLoading && <CircularProgress />}
-        {user?.email && (
-          <Alert severity="success">User Created successfully!</Alert>
-        )}
-        {authError && <Alert severity="error">{authError}</Alert>}
-      </form>
+    <div className="row  login-box">
+      <div className="col-lg-6 col-md-6 col-sm-12 email-box">
+        <Typography
+          className="login-title"
+          sx={{ mt: 5 }}
+          variant="body1"
+          gutterBottom
+        >
+          Log in
+        </Typography>
+        <form onSubmit={handleForm}>
+          <TextField
+            className="email-section"
+            id="outlined-basic"
+            sx={{ width: "50%", m: 1 }}
+            label="Your Email"
+            type="email"
+            name="email"
+            onBlur={hanleOnBlue}
+            variant="outlined"
+            label="Email"
+          />
+          <p></p>
+          <TextField
+            className="email-section"
+            id="outlined-basic"
+            variant="outlined"
+            sx={{ width: "50%", m: 1 }}
+            label="Your Password"
+            type="password"
+            name="password"
+            onBlur={hanleOnBlue}
+            label="Password"
+          />
+          <p></p>
+          <Button type="submit" sx={{ width: "25%", m: 1 }} variant="contained">
+            Sign In
+          </Button>
+          <p></p>
+          <Link to="/Register">
+            <Button className="register-btn" variant="text">
+              Create account
+            </Button>
+          </Link>
+          {isLoading && <CircularProgress />}
+          {user?.email && (
+            <Alert severity="success">User Created successfully!</Alert>
+          )}
+          {authError && <Alert severity="error">{authError}</Alert>}
+        </form>
+      </div>
+      <div className="col-lg-6 col-md-6 sm-12 login-img">
+        <img src="https://i.ibb.co/FHJY3nb/4957136.jpg" alt="" />
+      </div>
     </div>
   );
 };

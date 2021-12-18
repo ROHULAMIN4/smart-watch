@@ -1,62 +1,69 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useFirebase/useAuth/useAuth";
-
+import "./Navigation.css";
 const Navigation = () => {
   const { user, logout } = useAuth();
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          ></IconButton>
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-            Baby toys
-          </Typography>
-          <Link
+    <>
+      <nav className="navbar navbar-light  style-nav ">
+        <div className="container-fluid container">
+          <h2 className="header-name"> Smart Watch</h2>
+          <input
+            placeholder="Serch here"
             style={{
-              color: "white",
-              textDecoration: "none",
+              backgroundColor: "white",
+              borderRadius: "5px",
+              paddingLeft: "7px",
+              border: "1px solid tomato",
             }}
-            to="/totallOrder"
-          >
-            Products
-          </Link>
-          <Link
-            style={{ color: "white", textDecoration: "none" }}
-            to="/dashbord"
-          >
-            <Button color="inherit">Dashbord</Button>
-          </Link>
-          {user?.email ? (
-            <Box>
-              <Button onClick={logout} color="inherit">
-                Logout
-              </Button>
-            </Box>
-          ) : (
-            <NavLink
-              style={{ textDecoration: "none", color: "white" }}
-              to="/login"
+            type="text"
+          />
+
+          <form class="d-flex">
+            <Link
+              style={{
+                color: "white",
+                textDecoration: "none",
+                paddingTop: "5px",
+                paddingRight: "5px",
+              }}
+              to="/totallOrder"
             >
-              <Button color="inherit">Login</Button>
-            </NavLink>
-          )}
-        </Toolbar>
-      </AppBar>
-    </Box>
+              Products
+            </Link>
+            <Link
+              style={{ color: "white", textDecoration: "none" }}
+              to="/dashbord"
+            >
+              <Button color="inherit">Dashbord</Button>
+            </Link>
+            {user?.email ? (
+              <Box>
+                <button
+                  onClick={logout}
+                  type="button"
+                  className="btn btn-outline-primary"
+                >
+                  <span style={{ color: "white" }}> Log out</span>
+                </button>
+              </Box>
+            ) : (
+              <NavLink
+                style={{ textDecoration: "none", color: "success" }}
+                to="/login"
+              >
+                <button type="button" className="btn btn-outline-primary">
+                  <span style={{ color: "white" }}> Log in</span>
+                </button>
+              </NavLink>
+            )}
+          </form>
+        </div>
+      </nav>
+    </>
   );
 };
 
