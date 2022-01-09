@@ -2,7 +2,8 @@
   /* background-color: #e3e9ee; */
   box-shadow: 10px 10px 10px gray;
 }
-.login-img {
+.login-img img {
+  width: 100%;
 }
 .email-box:hover {
   box-shadow: 20px 20px 30px rgba(128, 128, 128, 0.726);

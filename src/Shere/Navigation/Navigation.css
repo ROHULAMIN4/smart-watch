@@ -1,7 +1,39 @@
-.style-nav {
+#style-nav {
   background-color: #243441;
+  position: sticky;
+  top: 0px;
+  left: 0;
+  z-index: 6;
 }
 .header-name {
   color: rgba(255, 255, 255, 0.966);
+
   /* padding-left: 10%; */
+}
+.customporfile {
+  display: inline;
+  margin-left: -150px;
+}
+#backBg {
+  background-color: #084272;
+  position: sticky;
+  top: 0px;
+  left: 0;
+  z-index: 6;
+  transition: all 0.7s;
+}
+#backBg .header-name {
+  color: tomato;
+}
+#backBg3 {
+  background-color: #3c709b;
+  position: sticky;
+  top: 0px;
+  left: 0;
+  z-index: 6;
+  transition: all 0.7s;
+}
+#backBg3 .header-name {
+  color: rgb(54, 52, 52);
+  font-weight: bold;
 }

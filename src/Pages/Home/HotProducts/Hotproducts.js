@@ -5,7 +5,7 @@ import HotProduct from "../HotProduct/HotProduct";
 const Hotproducts = () => {
   const [selles, setSelles] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bestSelles")
+    fetch("https://salty-fortress-77279.herokuapp.com/bestSelles")
       .then((res) => res.json())
       .then((data) => setSelles(data));
   }, []);

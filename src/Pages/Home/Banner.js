@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import "./Banner.css";
 const Banner = () => {
   return (
-    <div>
+    <div className="banner-top">
       <Carousel>
         <Carousel.Item>
           <img
@@ -18,10 +18,6 @@ const Banner = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               deserunt accusamus possimus, quae blanditiis provident explicabo
               architecto asperiores nihil illo quod impedit suscipit et omnis
-              harum aliquid minus officia velit, esse repellendus deleniti quia
-              cumque reiciendis. Exercitationem placeat, fugit sit debitis
-              voluptatum ipsum odio magni inventore, dolorem consectetur
-              accusamus quisquam!
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -37,10 +33,6 @@ const Banner = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               deserunt accusamus possimus, quae blanditiis provident explicabo
               architecto asperiores nihil illo quod impedit suscipit et omnis
-              harum aliquid minus officia velit, esse repellendus deleniti quia
-              cumque reiciendis. Exercitationem placeat, fugit sit debitis
-              voluptatum ipsum odio magni inventore, dolorem consectetur
-              accusamus quisquam!
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -57,10 +49,6 @@ const Banner = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               deserunt accusamus possimus, quae blanditiis provident explicabo
               architecto asperiores nihil illo quod impedit suscipit et omnis
-              harum aliquid minus officia velit, esse repellendus deleniti quia
-              cumque reiciendis. Exercitationem placeat, fugit sit debitis
-              voluptatum ipsum odio magni inventore, dolorem consectetur
-              accusamus quisquam!
             </p>
           </Carousel.Caption>
         </Carousel.Item>

@@ -116,7 +116,7 @@ const Register = () => {
           {authError && <Alert severity="error">{authError}</Alert>}
         </div>
       </div>
-      <div className="col-lg-6 col-ms-6 col-sm-12">
+      <div className="col-lg-6 col-ms-6 col-sm-12 login-img">
         <img src="https://i.ibb.co/9cdJ0W5/Mobile-login.jpg" alt="" />
       </div>
     </div>

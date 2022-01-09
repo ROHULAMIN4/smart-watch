@@ -4,12 +4,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const Products = () => {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     fetch("https://salty-fortress-77279.herokuapp.com/addproduct")
       .then((res) => res.json())
       .then((data) => setProducts(data));
     AOS.init();
   }, []);
+
   return (
     <div className="background-svg">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

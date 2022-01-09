@@ -10,11 +10,6 @@ const RequiestOrser = ({ product }) => {
   const handleClose = () => setOpen(false);
   return (
     <>
-      {/* <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, vitae
-        voluptates ipsum ratione laboriosam nostrum autem aspernatur,
-        asperiores, adipisci nihil reprehenderit aliquam consequatur?
-      </p> */}
       <div className="col-lg-3 col-md-6 col-sm-12">
         <div className="card-Style">
           <img style={{ width: "100%", height: "100%" }} src={img} alt="" />
@@ -25,33 +20,10 @@ const RequiestOrser = ({ product }) => {
             <button onClick={handleOpen} type="button" class="btn btn-success">
               Add To card
             </button>
-
-            {/* <Button onClick={handleOpen} sx={{ mb: 4 }} variant="contained">
-              Purchase
-            </Button> */}
           </div>
         </div>
       </div>
-      {/* <div className="col-lg-4 col-sm-12" data-aos="fade-up-left">
-        <div className="card-Style1">
-          <img
-            style={{ width: "300", height: "300px", borderRadius: "50%" }}
-            src={img}
-            alt=""
-          />
-          <h4 className="text-success">{Name}</h4>
-          <p>{description}</p>
-          <p className="fs-4 fw-bold text-secondary">Price:{price}</p>
-          <Button onClick={handleOpen} sx={{ mb: 4 }} variant="contained">
-            Purchase
-          </Button>
-          <Link to="/">
-            <Button sx={{ mb: 4, ml: 4 }} variant="contained">
-              Back to Home
-            </Button>
-          </Link>
-        </div>
-      </div> */}
+
       <PurchaseModal
         handleClose={handleClose}
         open={open}

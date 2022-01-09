@@ -4,3 +4,9 @@
 .banner-des {
   color: black;
 }
+
+@media only screen and (max-width: 600px) {
+  .banner-top p {
+    font-size: 10px;
+  }
+}

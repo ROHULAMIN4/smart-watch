@@ -17,7 +17,7 @@ const BestSells = () => {
     formData.append("descript", descript);
     formData.append("images", img);
 
-    fetch("http://localhost:5000/bestSelles", {
+    fetch("https://salty-fortress-77279.herokuapp.com/bestSelles", {
       method: "POST",
       body: formData,
     })

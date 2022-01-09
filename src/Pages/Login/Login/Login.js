@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
   };
   return (
-    <div className="row  login-box">
+    <div className="row login-box">
       <div className="col-lg-6 col-md-6 col-sm-12 email-box">
         <Typography
           className="login-title"

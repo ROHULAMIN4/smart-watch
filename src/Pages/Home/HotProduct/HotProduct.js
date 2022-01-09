@@ -1,11 +1,9 @@
+
 import React from "react";
-import PurchaseModal from "../PurchaseModal/PurchaseModal";
+
 
 const HotProduct = ({ sell }) => {
   const { name, price, desc, image } = sell;
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   return (
     <>
@@ -19,21 +17,12 @@ const HotProduct = ({ sell }) => {
             <h4 className="text-warning pt-4">{name}</h4>
             <p>{desc}</p>
             <p className="fs-4 fw-bold text-info">Price:{price}</p>
-            <button onClick={handleOpen} type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success">
               Add To card
             </button>
-
-            {/* <Button onClick={handleOpen} sx={{ mb: 4 }} variant="contained">
-              Purchase
-            </Button> */}
           </div>
         </div>
       </div>
-      {/* <PurchaseModal
-        handleClose={handleClose}
-        open={open}
-        sell={sell}
-      ></PurchaseModal> */}
     </>
   );
 };
